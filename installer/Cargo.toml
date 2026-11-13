@@ -1,0 +1,9 @@
+[package]
+name = "installer"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "CUModLoader-Setup"
+path = "src/bin/loader.rs"

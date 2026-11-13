@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["loader", "installer"]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.88"
+
+[profile.release]
+opt-level = "s"
+codegen-units = 1
+panic = "unwind"
+strip = true
