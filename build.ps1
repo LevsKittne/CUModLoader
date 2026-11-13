@@ -32,7 +32,6 @@ Copy-Item (Join-Path $root "target\example\ExampleMod.dll") $mods
 cargo build --release --manifest-path (Join-Path $root "Cargo.toml") -p installer
 if ($LASTEXITCODE -ne 0) { throw "installer build failed" }
 Copy-Item (Join-Path $root "target\release\CUModLoader-Setup.exe") $setup
-Copy-Item (Join-Path $root "installer\*.txt") $setup
 
 if ($Install) {
     if (-not (Test-Path (Join-Path $GameDir "CasualtiesUnknown.exe"))) { throw "game not found in $GameDir" }
